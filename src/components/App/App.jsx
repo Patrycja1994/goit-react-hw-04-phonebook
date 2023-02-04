@@ -43,8 +43,7 @@ import style from './App.module.css';
   }  
 
   useEffect(() => {
-    const contactsFromStorage = contacts;
-    localStorage.setItem("contacts", JSON.stringify(contactsFromStorage));
+    localStorage.setItem("contacts", JSON.stringify(contacts));
 }, [contacts]);
 
     const filtredContacts = contacts.filter((contact) => contact.name.toLowerCase().includes(filter));
